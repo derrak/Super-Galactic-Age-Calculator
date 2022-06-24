@@ -7,9 +7,14 @@ export default class SolarCalc{
   }
   
   yearOutput() {
-    return "Your age in Mercurian years is: " + this.mercury;
+    let outputString = `Your age in Mercurian years is ${this.mercury}, in Venusian years is ${this.venus}, in Martian years is ${this.mars} and ${this.jupiter} in Jovian years`
+    return outputString;
   }  
 
+  // yearMap() {
+  //   let yearMap = new Map(Object.entries);
+  //   return yearMap;
+  // }
 
 
 }

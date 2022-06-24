@@ -2,7 +2,7 @@ import LifeExpect from './../src/js/lifeExpect.js';
 
 describe('LifeExpect', () => {
   test('should create a lifeExpect object that calcs diff between earthLifeExpectYears and earthAgeYears', () => {
-    const lifeExpectYearsCalc = new LifeExpect(80, 70);
+    const lifeExpectYearsCalc = new LifeExpect(42, 80);
     expect(lifeExpectYearsCalc.mercury).toEqual(9.12);
     expect(lifeExpectYearsCalc.venus).toEqual(23.56);
     expect(lifeExpectYearsCalc.mars).toEqual(71.44);
@@ -17,6 +17,11 @@ describe('LifeExpect', () => {
 
   test('should correctly determine if earthLifeExpectYears > earthAgeYears', () => {
     const lifeExpectYearsCalc = new LifeExpect(90, 80);
-    expect(lifeExpectYearsCalc.lifeExpectOutput()).toEqual("Congrats! You should be dead! You've surpassed you life expectancy b the eqivilent of 2.4 Mercurian years, 6.2 Venusian years, 18.8 Martian years, or 118.6 Jovian years!");
+    expect(lifeExpectYearsCalc.lifeExpectOutput()).toEqual("Congrats! You should be dead! You've surpassed you life expectancy by the eqivilent of 2.4 Mercurian years, 6.2 Venusian years, 18.8 Martian years, or 118.6 Jovian years!");
+  });
+  
+  test('should correctly determine if earthLifeExpectYears < earthAgeYears', () => {
+    const lifeExpectYearsCalc = new LifeExpect(70, 80);
+    expect(lifeExpectYearsCalc.lifeExpectOutput()).toEqual("Congrats! You're not dead yet! You've got the eqivilent of 2.4 Mercurian years, 6.2 Venusian years, 18.8 Martian years, or 118.6 Jovian years left to live!");
   });
 });

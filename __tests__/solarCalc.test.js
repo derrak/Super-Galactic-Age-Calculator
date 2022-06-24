@@ -14,10 +14,10 @@ describe('SolarCalc', () => {
     expect(solarYearsCalc.jupiter).toEqual(498.12);
   });
 
-  test('should correctly return output of Mercurian years', () => {
-    const solarYearsCalc = new SolarCalc(42);
-    expect(solarYearsCalc.yearOutput()).toEqual("Your age in Mercurian years is: 10.08");
-  });
+  // test('should correctly return output of Mercurian years', () => {
+  //   const solarYearsCalc = new SolarCalc(42);
+  //   expect(solarYearsCalc.yearOutput()).toEqual("Your age in Mercurian years is: 10.08");
+  // });
 
   test('should correctly return concatenated sentence of ', () => {
     const solarYearsCalc = new SolarCalc(42);
